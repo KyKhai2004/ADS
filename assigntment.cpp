@@ -1,10 +1,13 @@
+
 /*
-Ex1:
-excercise 1:
-1. Write a program that takes a string as input and prints the string in reverse order.
-2. Write a program that takes a string as input and counts the number of vowels in the string.
-
-
+in this problem , a natural number is given. The objective is to find a digit and swap its position 
+in the number to obtain the smallest possible value
+Note: the smallest value must have the same number of digits as in the original value; thus,
+0 cannot be used
+    Example: 51209 -> the possible value is 15029 after one swap. 
+    Propose an algorithm using iteration and implement it in C++ to complete the task
+    Propose and implement an alternative algorithm using recusion for this task.
+    Calculate the complexity of the two approach. justify the answer, by making comment on the code
 */
 
 /*
