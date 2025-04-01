@@ -9,7 +9,7 @@ excercise 1:
 
 /*
 ex2: 
-
+asdsjawjdasbjcabjdsbawe
 
 */
 
