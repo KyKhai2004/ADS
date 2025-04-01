@@ -1,6 +1,6 @@
 /*
 Ex1:
-
+lafm bafi o day
 
 
 */
