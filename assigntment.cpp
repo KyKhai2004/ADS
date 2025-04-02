@@ -1,14 +1,14 @@
 
 /*
-in this problem , a natural number is given. The objective is to find a digit and swap its position 
-in the number to obtain the smallest possible value
-Note: the smallest value must have the same number of digits as in the original value; thus,
-0 cannot be used
-    - Example: 51209 -> the possible value is 15029 after one swap. 
-    yêu cầu: 
-    - Propose an algorithm using iteration and implement it in C++ to complete the task
-    - Propose and implement an alternative algorithm using recusion for this task.
-    - Calculate the complexity of the two approach. justify the answer, by making comment on the code
+initialize a random array of your choice. the current goal is to verify whether an array number is pentagon
+Note: pentagon number is calculated by following formula: 
+        f(n) = (n*(3n-1))/2
+Yeu cau:
+    - write pseudo code using Recursion(if neccessary, Iteration) to check all values in the given array 
+    are pentagon or not(2pts)
+    - Write a program in C++ to complete your proposed algorithm in the pseudo-code (8pts)
+    - calculate the complexity of the function(2pts)
+
 */
 
 /*
