@@ -63,6 +63,10 @@ void testFunctions() {
     
     cout << "After arranging ";
     displayArray(arr, size);
+    
+    cout << "Verification:" << endl;
+    cout << "16 is perfect square: " << (isPerfectSquare(16) ? "Yes" : "No") << endl;
+    cout << "7 is perfect square: " << (isPerfectSquare(7) ? "Yes" : "No") << endl;
 }
 
 int main() {
