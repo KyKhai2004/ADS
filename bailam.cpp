@@ -19,7 +19,7 @@ std::string smallestNumberIterative(std::string num) {
     // Time Complexity: O(n²) - Two loops try all pairs (n * n), simplified to swap attempts
     // Space Complexity: O(n) - Space for 'result' and 'temp' strings
 }
-
+//test
 // Recursive Solution
 void findSmallestRecursive(const std::string& num, std::string& result, int start, bool swapped) {
     if (swapped) {  // Nếu đã hoán đổi, kiểm tra kết quả
