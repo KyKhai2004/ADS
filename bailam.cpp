@@ -1,54 +1,55 @@
 #include <iostream>
+#include <vector>
+#include <cmath>
 using namespace std;
 
-// pseudo code
-// Algorithm CheckPentagonalArray(arr):
-//     Function isPentagonal(num):
-//         n = 1
-//         while true:
-//             pent = (n * (3n - 1)) / 2
-//             if pent == num:
-//                 return true
-//             if pent > num:
-//                 return false
-//             n = n + 1
-    
-//     For each number in arr:
-//         if isPentagonal(number) == true:
-//             print number + " is pentagonal"
-//         else:
-//             print number + " is not pentagonal"
+// pseudo code:
+// Algorithm CheckPentagonalArray(arr, index):
+//     If index >= length(arr):
+//         return
 
+//     Function IsPentagonal(num):
+//         n = (sqrt(24*num + 1) + 1) / 6
+//         if n is integer:
+//             return true
+//         return false
+    
+//     // Recursive case
+//     if IsPentagonal(arr[index]):
+//         print arr[index] + " is pentagonal"
+//     else:
+//         print arr[index] + " is not pentagonal"
+//     CheckPentagonalArray(arr, index + 1)
 
 
 bool isPentagonal(int num) {
-    int n = 1;
-    while (true) {
-        long long pent = (n * (3LL * n - 1)) / 2;
-        if (pent == num) {
-            return true;
-        }
-        if (pent > num) {
-            return false;
-        }
-        n++;
+    double n = (sqrt(24.0 * num + 1) + 1) / 6;
+    return (n - floor(n)) < 0.000001; 
+}
+
+// Recursive function to check array
+void checkPentagonalArray(const vector<int>& arr, int index) {
+    if (index >= arr.size()) {
+        return;
     }
+    
+    if (isPentagonal(arr[index])) {
+        cout << arr[index] << " is a pentagonal number" << endl;
+    } else {
+        cout << arr[index] << " is not a pentagonal number" << endl;
+    }
+    
+    checkPentagonalArray(arr, index + 1);
 }
 
 int main() {
-    int arr[] = {5, 10, 12, 15, 22, 25};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    vector<int> arr = {1, 5, 12, 22, 35, 51, 70, 15};
     
     cout << "Checking array elements:" << endl;
-    for (int i = 0; i < size; i++) {
-        if (isPentagonal(arr[i])) {
-            cout << arr[i] << " is a pentagonal number" << endl;
-        } else {
-            cout << arr[i] << " is not a pentagonal number" << endl;
-        }
-    }
+    checkPentagonalArray(arr, 0);
     
     return 0;
 }
 
-// complexity: O(m * sqrt(M))
+
+// complexity: O(n)
