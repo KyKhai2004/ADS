@@ -7,6 +7,7 @@ lafm bafi o day
 
 /*
 ex2: 
+ádóao
 
 
 */
